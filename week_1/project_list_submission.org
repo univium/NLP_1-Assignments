@@ -1,0 +1,16 @@
+#+title: Project List Submission
+
+
+* Multimodal Assistant for High-Volume Food Service
+
+This project involves a modular AI system designed to support servers by synthesizing voice inputs (tableside ordering), visual cues (table status), and POS data. By utilizing a human-in-the-loop architecture, the AI doesn’t replace the server but acts as a digital co-pilot. It can flag when a table has been waiting too long for drinks or automatically queue orders in the kitchen while the server is still engaging with the guests. The restaurant industry suffers from high cognitive load and turnover. This system bridges the gap between the physical dining room and the digital kitchen. By monitoring the "outcome" (e.g., verifying that the dish delivered matches the order via CV at the pass), it reduces costly errors and improves guest satisfaction. The human-in-the-loop aspects allows servers to override AI suggestions, ensuring the hospitality element remains personal and flexible.
+
+* Computer Vision (CV) Health Suite for Marine Aquaria
+
+This project focuses on using Computer Vision to automate the visual monitoring of saltwater ecosystems. Unlike standard chemical probes that measure pH or salinity, this CV system would track biological indicators: coral polyp expansion, fish respiratory rates, and the presence of pests like Aiptasia or Flatworms. It could also provide early warnings for "RTN" (Rapid Tissue Necrosis) in sensitive SPS coral. Saltwater reef tanks are notoriously fragile and represent a significant financial investment. Traditional automation is blind to visual health; a tank can have perfect chemistry but still suffer from a disease outbreak or equipment failure (e.g., a clogged pump causing specific bubble patterns). This project fills a massive gap in the "smart home" market for hobbyists and public aquaria, providing a non-invasive way to monitor livestock health 24/7.
+
+* NLP-Enhanced Voice Picker for Warehouse Management (WMS)
+
+This project aims to modernize warehouse logistics by replacing clunky, legacy "voice-directed" systems with a more fluid, **Natural Language Processing (NLP)** interface. The system would allow warehouse associates to receive picking instructions via headset and confirm actions using natural speech, even in high-noise environments. It integrates directly with the WMS to update inventory levels in real-time as items are pulled. Efficiency in fulfillment centers is measured in seconds. Traditional handheld scanners require workers to constantly look down and use their hands, which increases the risk of accidents and slows down the "pick-to-belt" process. A robust voice picker keeps the worker’s "eyes on the prize and hands on the box," significantly increasing safety and throughput. Using modern noise-canceling AI, this system would be far more reliable than the rigid, command-based voice systems of the past.
+
+
