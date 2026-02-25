@@ -1,0 +1,71 @@
+#+title: Week 5 Ns
+
+* Vocabulary
+a, ago, from, improve, is, long, more, novel, novels, read, should, the, this, time, to, victorian, vocabulary, you, your
+
+Total unique words: 19
+
+* Task 1: Bag of Words Table
+
+| Sentence | a | ago | from | improve | is | long | more | novel | novels | read | should | the | this | time | to | victorian | vocabulary | you | your |
+|----------+---+-----+------+---------+----+------+------+-------+--------+------+--------+-----+------+------+----+-----------+------------+-----+------|
+| S1       | 1 |   1 |    1 |       0 |  1 |    1 |    0 |     1 |      0 |    0 |      0 |   0 |    1 |    1 |  0 |         0 |          0 |   0 |    0 |
+| S2       | 0 |   0 |    0 |       0 |  1 |    0 |    0 |     1 |      0 |    0 |      0 |   1 |    0 |    0 |  0 |         1 |          0 |   0 |    0 |
+| S3       | 0 |   0 |    0 |       0 |  0 |    0 |    1 |     0 |      1 |    1 |      1 |   0 |    0 |    0 |  0 |         0 |          0 |   1 |    0 |
+| S4       | 0 |   0 |    0 |       1 |  1 |    0 |    0 |     0 |      1 |    1 |      0 |   0 |    0 |    0 |  2 |         0 |          1 |   0 |    1 |
+
+* Task 2: Document Frequency (DF) and IDF
+
+| Word       | DF | Appears in | IDF $\frac{(log_{10}}{(4/DF))}$ |
+|------------+----+------------+---------------------------------|
+| a          |  1 | S1         |                           0.602 |
+| ago        |  1 | S1         |                           0.602 |
+| from       |  1 | S1         |                           0.602 |
+| improve    |  1 | S4         |                           0.602 |
+| is         |  3 | S1 S2 S4   |                           0.125 |
+| long       |  1 | S1         |                           0.602 |
+| more       |  1 | S3         |                           0.602 |
+| novel      |  2 | S1 S2      |                           0.301 |
+| novels     |  2 | S3 S4      |                           0.301 |
+| read       |  2 | S3 S4      |                           0.301 |
+| should     |  1 | S3         |                           0.602 |
+| the        |  1 | S2         |                           0.602 |
+| this       |  1 | S1         |                           0.602 |
+| time       |  1 | S1         |                           0.602 |
+| to         |  1 | S4         |                           0.602 |
+| victorian  |  1 | S2         |                           0.602 |
+| vocabulary |  1 | S4         |                           0.602 |
+| you        |  1 | S3         |                           0.602 |
+| your       |  1 | S4         |                           0.602 |
+
+* Task 2: TF-IDF Table
+(Rounded to 3 decimal places)
+
+| Sentence | a    | ago  | from | improve | is   | long | more | novel | novels | read | should | the  | this | time | to    | victorian | vocabulary | you  | your |
+|----------|------|------|------|---------|------|------|------|-------|--------|------|--------|------|------|------|-------|-----------|------------|------|------|
+| S1       | 0.602| 0.602| 0.602| 0.000   | 0.125| 0.602| 0.000| 0.301 | 0.000  | 0.000| 0.000  | 0.000| 0.602| 0.602| 0.000 | 0.000     | 0.000      | 0.000| 0.000|
+| S2       | 0.000| 0.000| 0.000| 0.000   | 0.125| 0.000| 0.000| 0.301 | 0.000  | 0.000| 0.000  | 0.602| 0.000| 0.000| 0.000 | 0.602     | 0.000      | 0.000| 0.000|
+| S3       | 0.000| 0.000| 0.000| 0.000   | 0.000| 0.000| 0.602| 0.000 | 0.301  | 0.301| 0.602  | 0.000| 0.000| 0.000| 0.000 | 0.000     | 0.000      | 0.602| 0.000|
+| S4       | 0.000| 0.000| 0.000| 0.602   | 0.125| 0.000| 0.000| 0.000 | 0.301  | 0.301| 0.000  | 0.000| 0.000| 0.000| 1.204 | 0.000     | 0.602      | 0.000| 0.602|
+
+** Notes
+- It seems that documents are understood to be as sentences too.
+- The result of the TF-IDF table seems to suggest a kind of matrix is created between the two features of the sentences or documents.
+  I say feaures because it seems that Document Frequency (DF) and Inverse Document Frequency (IDF) are two different features of documents, where TF-IDF is just the ratio of such documents over the document feq of a word, all as an image of a log in base 10.
+- TF = raw term frequency (from BoW table)
+- IDF = log₁₀(4 / DF)
+- TF-IDF = TF × IDF
+
+
+** Answer each question in 3–5 sentences
+*** Which word has the highest TF-IDF score in Sentence 4, and why does it have such a high value?
+The word within document four which has the highest value is 'to'. Without looking into why just yet, I know that by the TF-IDF expression $TF-IDF = TF * IDF$  means any large vaule would be either connected to the Term Frequency of that word or Inverse Document Frequency; looking into the IDF of the word 'to' I find that it was on the high end, meaning it's Document Frequency was small & only appeard in one document; looking into the table for Bag of Words I find too that though it appeared twice it was only in it's sentence rather then distributed like most others were. This would amount to it's expression being $TF-IDF = 2 * 0.602 = 1.204$, which can now be seen as having the largest TF while one of the higest IDF; so, I would say that the term within the expression that explains it's vaule is that of it's TF or rather the raw cell count in the Bag of Words table; but why is it's attribute of having the largest occuernce in a single document rather then a couple arises this properity of it?     
+
+This properity I'm discriping above is central function of TF-IDF; it's to weight or reward words which are repeated a lot in a single document as it's supposed that such an attribute of a word means it's thematically important to that document. This is why it's raw term frequency is used while being a mutiple of it's IDF, being a weight of the whole corpus for the rareity of words while penalizing ones more frequent. 
+
+*** Why does the very common word “is” have a low TF-IDF score across most sentences?
+Much like the prior analysis for the word 'to' the reason for it's low TF-IDF score is due to it's distribution accross the documents(sentences). As I noted before, the factor for TF-IDF is that of IDF which will penalize terms which appear frequentlly accross the documnts of the corpus. This can be seen in this case by $..log_{10}\frac{N}{DF}$ where N=4(the documents) & DF=3(Doc Freq). 
+
+*** How does TF-IDF improve upon simple Bag of Words when representing document importance?
+Unlike the raw amount of term's apperence within the given documents give by the Bag of Words algorithm, TF-IDF generates a value representive of it's apperence relative to it's rarity which given by the IDF of the word.
+
