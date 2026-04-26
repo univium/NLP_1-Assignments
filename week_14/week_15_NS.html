@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-04-13 Mon 17:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Week 15 Ns</title>
+<meta name="author" content="Nate" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Week 15 Ns</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org7e67a32">1. Part 1: Exploring an Open-Source LLM Chatbot</a>
+<ul>
+<li><a href="#org19205bd">1.1. 1. How well did the model handle neutrality and clarity?</a></li>
+<li><a href="#orgecc0116">1.2. 2. Did the response feel biased, vague, or confident? Why?</a></li>
+<li><a href="#orgc25aa25">1.3. 3. How did this compare to your experience using ChatGPT or Bard?</a></li>
+</ul>
+</li>
+<li><a href="#org2ce6966">2. Part 2: LLM Capability Comparison</a>
+<ul>
+<li><a href="#org2b4f7f1">2.1. Why did PaLM 2 improve over PaLM despite being smaller?</a></li>
+<li><a href="#orgce9aff2">2.2. Why is Med-PaLM 2 considered a breakthrough in healthcare?</a></li>
+<li><a href="#org244fdc3">2.3. Why did Transformers largely replace LSTMs for large-scale NLP?</a></li>
+</ul>
+</li>
+<li><a href="#orgad9e0aa">3. Part 3: LLMs for Workforce Productivity</a>
+<ul>
+<li><a href="#org5c5a9b0">3.1. 1. Give two real-world workforce applications of LLMs.</a></li>
+<li><a href="#orga9fd9f1">3.2. 2. How do LLMs reduce cognitive or administrative workload?</a></li>
+<li><a href="#org2b7cbe7">3.3. 3. Why might companies still prefer smaller or open-source models like LLaMA over GPT?</a></li>
+</ul>
+</li>
+<li><a href="#orge0d156a">4. Part 4: Continual Learning &amp; Responsible AI</a>
+<ul>
+<li><a href="#org0bf2ebf">4.1. 1. What is continual learning, and why is it important for LLMs?</a></li>
+<li><a href="#orgac7d9e7">4.2. 2. What is catastrophic forgetting, and why is it dangerous?</a></li>
+<li><a href="#org27c563c">4.3. 3. Name one ethical risk of deploying LLMs and one mitigation strategy.</a>
+<ul>
+<li><a href="#org0a6f5c7">4.3.1. Risk: Algorithmic Bias, where the model reflects and amplifies societal prejudices found in its training data (e.g., in hiring or lending).</a></li>
+<li><a href="#org70310e3">4.3.2. Mitigation: RLHF (Reinforcement Learning from Human Feedback), where human reviewers explicitly rank model outputs to discourage biased behavior and reward neutral, fair responses.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org6fe3d7f">5. Part 5: Reflection</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7e67a32" class="outline-2">
+<h2 id="org7e67a32"><span class="section-number-2">1.</span> Part 1: Exploring an Open-Source LLM Chatbot</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Model Used: LLaMA-7B
+</p>
+</div>
+<div id="outline-container-org19205bd" class="outline-3">
+<h3 id="org19205bd"><span class="section-number-3">1.1.</span> 1. How well did the model handle neutrality and clarity?</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+The model handled neutrality by providing a multi-faceted definition of privilege, touching upon socioeconomic, racial, and gender-based contexts without taking an emotional stance. The clarity was high, utilizing bullet points to distinguish between &ldquo;earned&rdquo; and &ldquo;unearned&rdquo; advantages. It maintained a textbook-like tone that avoided inflammatory language, effectively sticking to a sociological framework.
+</p>
+</div>
+</div>
+<div id="outline-container-orgecc0116" class="outline-3">
+<h3 id="orgecc0116"><span class="section-number-3">1.2.</span> 2. Did the response feel biased, vague, or confident? Why?</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+The response felt confident but slightly academic, which can sometimes come across as vague when addressing specific real-world nuances. It appeared relatively unbiased because it framed privilege as a systemic concept rather than an individual moral failing. However, its brevity occasionally led to a lack of depth, making some complex points feel oversimplified.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc25aa25" class="outline-3">
+<h3 id="orgc25aa25"><span class="section-number-3">1.3.</span> 3. How did this compare to your experience using ChatGPT or Bard?</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Compared to GPT or Gemini , LLaMA-  felt more restricted and less &ldquo;conversational.&rdquo; While GPT often provides a more nuanced, empathetic, and lengthy synthesis of various viewpoints, LLaMA was more direct and less likely to engage in meta-commentary about the sensitivity of the topic. The open-source model felt slightly more &ldquo;raw&rdquo; and less polished in its formatting compared to the commercial models.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org2ce6966" class="outline-2">
+<h2 id="org2ce6966"><span class="section-number-2">2.</span> Part 2: LLM Capability Comparison</h2>
+<div class="outline-text-2" id="text-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Model</td>
+<td class="org-left">Primary Strengths</td>
+<td class="org-left">Key Limitations</td>
+<td class="org-left">Best Use Cases</td>
+</tr>
+
+<tr>
+<td class="org-left">:---</td>
+<td class="org-left">:---</td>
+<td class="org-left">:---</td>
+<td class="org-left">:---</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>PaLM / PaLM 2</b></b></td>
+<td class="org-left">Exceptional multilinguality, reasoning, and coding capabilities.</td>
+<td class="org-left">High computational cost for training; PaLM 2 still faces hallucination risks.</td>
+<td class="org-left">Google Workspace integration, translation, complex reasoning.</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Med-PaLM 2</b></b></td>
+<td class="org-left">Domain-specific medical knowledge and clinical reasoning.</td>
+<td class="org-left">Narrow scope; requires strict ethical oversight to prevent medical error.</td>
+<td class="org-left">Medical exam prep, clinical documentation, health Q&amp;A.</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>LaMDA</b></b></td>
+<td class="org-left">Optimized for fluid, open-ended, and safe dialogue.</td>
+<td class="org-left">Tendency toward &ldquo;persona&rdquo; adoption; limited performance in non-dialogue tasks.</td>
+<td class="org-left">Conversational agents, digital assistants, creative brainstorming.</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>LLaMA</b></b></td>
+<td class="org-left">Efficient, open-source, and highly performant relative to size.</td>
+<td class="org-left">Requires significant fine-tuning for safety; smaller versions lack deep reasoning.</td>
+<td class="org-left">Research, local deployment, developer-led innovation.</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>GPT-style</b></b></td>
+<td class="org-left">Massive world knowledge, broad task versatility, and high logic.</td>
+<td class="org-left">Closed-source nature; high API costs; potential for biased training data.</td>
+<td class="org-left">Content creation, coding assistance, enterprise chatbots.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="outline-container-org2b4f7f1" class="outline-3">
+<h3 id="org2b4f7f1"><span class="section-number-3">2.1.</span> Why did PaLM 2 improve over PaLM despite being smaller?</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+PaLM was trained on a more diverse and high-quality dataset, including more multilingual text and source code. Furthermore, it utilized more efficient compute-optimal scaling laws, proving that better data and architecture refinement are often more effective than simply increasing parameter count.
+</p>
+</div>
+</div>
+<div id="outline-container-orgce9aff2" class="outline-3">
+<h3 id="orgce9aff2"><span class="section-number-3">2.2.</span> Why is Med-PaLM 2 considered a breakthrough in healthcare?</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+It was the first LLM to perform at an &ldquo;expert&rdquo; level on the US Medical Licensing Examination style questions. Beyond just facts, it demonstrated an ability to align its reasoning with medical safety standards and clinician-approved consensus, which is vital for high-stakes healthcare environments.
+</p>
+</div>
+</div>
+<div id="outline-container-org244fdc3" class="outline-3">
+<h3 id="org244fdc3"><span class="section-number-3">2.3.</span> Why did Transformers largely replace LSTMs for large-scale NLP?</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Transformers utilize a &ldquo;Self-Attention&rdquo; mechanism that allows them to process entire sequences of text simultaneously rather than sequentially. This parallelization makes them much faster to train on massive datasets and allows them to capture long-range dependencies in text that LSTMs often lose.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgad9e0aa" class="outline-2">
+<h2 id="orgad9e0aa"><span class="section-number-2">3.</span> Part 3: LLMs for Workforce Productivity</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org5c5a9b0" class="outline-3">
+<h3 id="org5c5a9b0"><span class="section-number-3">3.1.</span> 1. Give two real-world workforce applications of LLMs.</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+In the Legal field, LLMs are used for &ldquo;Contract Analysis,&rdquo; where they can scan thousands of pages to find conflicting clauses or summarize risks in seconds. In Education, LLMs act as &ldquo;Adaptive Tutors,&rdquo; providing personalized feedback to students on their essays or explaining complex math problems in multiple different ways tailored to the student’s level.
+</p>
+</div>
+</div>
+<div id="outline-container-orga9fd9f1" class="outline-3">
+<h3 id="orga9fd9f1"><span class="section-number-3">3.2.</span> 2. How do LLMs reduce cognitive or administrative workload?</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+LLMs automate the &ldquo;first draft&rdquo; process, taking the burden of the blank page away from workers by generating reports, emails, or code snippets based on brief instructions. They also serve as powerful summarization tools, allowing professionals to digest long meetings or technical documents quickly, thereby freeing up time for high-level decision-making and creative strategy.
+</p>
+</div>
+</div>
+<div id="outline-container-org2b7cbe7" class="outline-3">
+<h3 id="org2b7cbe7"><span class="section-number-3">3.3.</span> 3. Why might companies still prefer smaller or open-source models like LLaMA over GPT?</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Companies often prefer open-source models for Data Privacy, as they can host the model on their own local servers without sending sensitive proprietary data to a third-party cloud. Additionally, smaller models are significantly cheaper to run (lower inference costs) and can be fine-tuned on a company’s specific internal data to perform better on niche tasks than a general-purpose model.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge0d156a" class="outline-2">
+<h2 id="orge0d156a"><span class="section-number-2">4.</span> Part 4: Continual Learning &amp; Responsible AI</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org0bf2ebf" class="outline-3">
+<h3 id="org0bf2ebf"><span class="section-number-3">4.1.</span> 1. What is continual learning, and why is it important for LLMs?</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Continual learning is the ability of a model to autonomously update its knowledge over time as new information becomes available without being retrained from scratch. It is important because the world is dynamic; without it, LLMs become &ldquo;frozen in time&rdquo; and provide outdated or irrelevant information.
+</p>
+</div>
+</div>
+<div id="outline-container-orgac7d9e7" class="outline-3">
+<h3 id="orgac7d9e7"><span class="section-number-3">4.2.</span> 2. What is catastrophic forgetting, and why is it dangerous?</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Catastrophic forgetting occurs when an LLM learns new information so aggressively that it completely loses or &ldquo;overwrites&rdquo; previously learned knowledge. This is dangerous because a model could lose its ability to perform basic reasoning or maintain safety protocols while trying to learn a specialized new skill.
+</p>
+</div>
+</div>
+<div id="outline-container-org27c563c" class="outline-3">
+<h3 id="org27c563c"><span class="section-number-3">4.3.</span> 3. Name one ethical risk of deploying LLMs and one mitigation strategy.</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-org0a6f5c7" class="outline-4">
+<h4 id="org0a6f5c7"><span class="section-number-4">4.3.1.</span> Risk: Algorithmic Bias, where the model reflects and amplifies societal prejudices found in its training data (e.g., in hiring or lending).</h4>
+</div>
+<div id="outline-container-org70310e3" class="outline-4">
+<h4 id="org70310e3"><span class="section-number-4">4.3.2.</span> Mitigation: RLHF (Reinforcement Learning from Human Feedback), where human reviewers explicitly rank model outputs to discourage biased behavior and reward neutral, fair responses.</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org6fe3d7f" class="outline-2">
+<h2 id="org6fe3d7f"><span class="section-number-2">5.</span> Part 5: Reflection</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+The assignments which I enjoyed the most throughot this term and ones that I think are to be the most useful going forward with such a life is that of Weeks 5-8 where we actually went thought and modified the complete pre-processing stage of handeling data and it&rsquo;s intergration into the overall pipeline itself. The former really changed how I see NLP and it&rsquo;s famous archutectures like that of Transformers as I now know what sort of processes and sub-modules of such are implemented into the overall archutecture. 
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Nate</p>
+<p class="date">Created: 2026-04-13 Mon 17:59</p>
+</div>
+</body>
+</html>

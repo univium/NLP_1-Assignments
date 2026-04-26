@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-04-11 Sat 12:43 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Week 13</title>
+<meta name="author" content="Nate" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Week 13</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org5c98eea">1. Assignment Notes</a>
+<ul>
+<li><a href="#org8a36562">1.1. I&rsquo;m going to be using Gemini instead of ChatGPT&rsquo;s line of models.</a></li>
+<li><a href="#orge33dc89">1.2. Poem Creation with Gem.</a>
+<ul>
+<li><a href="#orgf93360a">1.2.1. The Definition of a Narrative Poem</a></li>
+<li><a href="#org978f290">1.2.2. Within the literary canon, narrative poems are often categorized by their <b><b>scope</b></b>, the <b><b>stature of their characters</b></b>, and the <b><b>stylistic treatment of their figures</b></b>.</a></li>
+<li><a href="#org35eb657">1.2.3. Key Characteristics: Vast settings, supernatural intervention, and &ldquo;In Medias Res&rdquo; (starting in the middle of the action).</a></li>
+<li><a href="#orgffe88e3">1.2.4. Examples: Achilles in <b>The Iliad</b>, Beowulf in <b>Beowulf</b>, or Odysseus in <b>The Odyssey</b>.</a></li>
+<li><a href="#org568b030">1.2.5. Key Characteristics: High-flown language used for low-stakes drama; satirical tone.</a></li>
+<li><a href="#org29ee0f7">1.2.6. Example: Alexander Pope’s <b>The Rape of the Lock</b>, which treats the theft of a lock of hair like a grand battle between gods.</a></li>
+<li><a href="#org93e6dea">1.2.7. Key Characteristics: Quatrains (four-line stanzas), repetition (refrains), and a rhythmic, musical quality.</a></li>
+<li><a href="#orgdc38bed">1.2.8. Example: The wedding guest and the sailor in Coleridge’s <b>The Rime of the Ancient Mariner</b>.</a></li>
+<li><a href="#orgea64452">1.2.9. Key Characteristics: Focus on &ldquo;natural&rdquo; nobility and the relationship between the figure and their environment.</a></li>
+<li><a href="#org5f6595f">1.2.10. Example: Tennyson’s <b>Idylls of the King</b>, which reimagines the knights of the Round Table through a lens of chivalric ideals.</a></li>
+<li><a href="#org83f4402">1.2.11. Three Visions of the Keeper of Time</a></li>
+</ul>
+</li>
+<li><a href="#org5c5c33d">1.3. Rubric</a></li>
+<li><a href="#orgd334037">1.4. Reflection</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5c98eea" class="outline-2">
+<h2 id="org5c98eea"><span class="section-number-2">1.</span> Assignment Notes</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org8a36562" class="outline-3">
+<h3 id="org8a36562"><span class="section-number-3">1.1.</span> I&rsquo;m going to be using Gemini instead of ChatGPT&rsquo;s line of models.</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+On a use basis, I see only a small amount of differences between the two; Gemini is a little too hand-holdy and ChatGPT wants to do everything. I&rsquo;m really only picking it because I find I like it&rsquo;s more teacher-like embedded prompt sentiment along when I&rsquo;m learning stuff or do very boilarplate code. Another reason for picking it is due to it&rsquo;s use of a Sparesely-gated MoE layer within it&rsquo;s models; such an arcutechual design choice is a feed-forward network outputting to a gating network within a cell existing overall within a recurrent network. Futher information about such implemenation within a LMM can be found in the open paper OUTRAGEOUSLY LARGE NEURAL NETWORKS: THE SPARSELY-GATED MIXTURE-OF-EXPERTS LAYER
+</p>
+</div>
+</div>
+<div id="outline-container-orge33dc89" class="outline-3">
+<h3 id="orge33dc89"><span class="section-number-3">1.2.</span> Poem Creation with Gem.</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-orgf93360a" class="outline-4">
+<h4 id="orgf93360a"><span class="section-number-4">1.2.1.</span> The Definition of a Narrative Poem</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+In literature, a <b><b>poem-styled story</b></b> is formally known as a <b><b>narrative poem</b></b>. Unlike lyric poetry, which focuses on personal emotions or fleeting moments, narrative poetry prioritizes <b><b>plot, character development, and setting</b></b>. It utilizes poetic devices—such as rhythm, rhyme, and imagery—to propel a sequence of events. Think of it as a bridge between the precision of a sonnet and the structural journey of a short story.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+## The Keeper of the Clock
+</p>
+
+<p>
+The gears were teeth that chewed the years,
+Inside a tower made of stone.
+Old Silas lived among the spheres,
+A king upon a brassy throne.
+He oiled the joints of Father Time,
+With heavy hands and silver hair,
+And listened to the hourly chime,
+That shuddered through the stagnant air.
+</p>
+
+<p>
+One Tuesday noon, the rhythm broke,
+A spring had snapped—a jagged sound.
+The village froze beneath the smoke,
+And silence settled on the ground.
+The baker’s breath was trapped in frost,
+The falling rain hung like a bead.
+The world was still, its pulse was lost,
+A heartbeat stopped in mid-stride greed.
+</p>
+
+<p>
+With steady fingers, Silas drew,
+A golden wire from his vest.
+He threaded history anew,
+And put the friction to the test.
+A single spark, a heavy <b>thrum</b>,
+The pendulum began its sway.
+The frozen birds began to hum,
+As Silas gave them back their day.
+</p>
+
+<p>
+He watched the crowds begin to move,
+Unaware of the pause they’d known.
+He settled back into the groove,
+Once more a king, once more alone.
+</p>
+</div>
+</div>
+<div id="outline-container-org978f290" class="outline-4">
+<h4 id="org978f290"><span class="section-number-4">1.2.2.</span> Within the literary canon, narrative poems are often categorized by their <b><b>scope</b></b>, the <b><b>stature of their characters</b></b>, and the <b><b>stylistic treatment of their figures</b></b>.</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+While all narrative poems tell a story, the &ldquo;figures&rdquo; (characters) and how they are presented define the specific sub-genre. Here are the primary styles:
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+## 1. The Epic (The Heroic Figure)
+The Epic is the &ldquo;heavyweight&rdquo; of narrative poetry. It focuses on a <b><b>larger-than-life hero</b></b> whose actions determine the fate of a nation, race, or the entire human universe. These figures are often semi-divine or possess extraordinary strength and moral complexity.
+</p>
+</div>
+</div>
+<div id="outline-container-org35eb657" class="outline-4">
+<h4 id="org35eb657"><span class="section-number-4">1.2.3.</span> Key Characteristics: Vast settings, supernatural intervention, and &ldquo;In Medias Res&rdquo; (starting in the middle of the action).</h4>
+</div>
+<div id="outline-container-orgffe88e3" class="outline-4">
+<h4 id="orgffe88e3"><span class="section-number-4">1.2.4.</span> Examples: Achilles in <b>The Iliad</b>, Beowulf in <b>Beowulf</b>, or Odysseus in <b>The Odyssey</b>.</h4>
+<div class="outline-text-4" id="text-1-2-4">
+<p>
+## 2. The Mock-Epic (The Trivial Figure)
+This style uses the lofty, formal language of an Epic to describe a <b><b>minor or trivial figure</b></b> involved in a petty situation. It creates humor by applying &ldquo;heroic&rdquo; importance to something insignificant.
+</p>
+</div>
+</div>
+<div id="outline-container-org568b030" class="outline-4">
+<h4 id="org568b030"><span class="section-number-4">1.2.5.</span> Key Characteristics: High-flown language used for low-stakes drama; satirical tone.</h4>
+</div>
+<div id="outline-container-org29ee0f7" class="outline-4">
+<h4 id="org29ee0f7"><span class="section-number-4">1.2.6.</span> Example: Alexander Pope’s <b>The Rape of the Lock</b>, which treats the theft of a lock of hair like a grand battle between gods.</h4>
+<div class="outline-text-4" id="text-1-2-6">
+<p>
+## 3. The Literary Ballad (The Tragic/Folk Figure)
+The ballad often centers on <b><b>ordinary or legendary figures</b></b> caught in moments of intense drama, romance, or tragedy. Unlike the Epic, the focus is narrow, usually revolving around a single event or a moral lesson.
+</p>
+</div>
+</div>
+<div id="outline-container-org93e6dea" class="outline-4">
+<h4 id="org93e6dea"><span class="section-number-4">1.2.7.</span> Key Characteristics: Quatrains (four-line stanzas), repetition (refrains), and a rhythmic, musical quality.</h4>
+</div>
+<div id="outline-container-orgdc38bed" class="outline-4">
+<h4 id="orgdc38bed"><span class="section-number-4">1.2.8.</span> Example: The wedding guest and the sailor in Coleridge’s <b>The Rime of the Ancient Mariner</b>.</h4>
+<div class="outline-text-4" id="text-1-2-8">
+<p>
+## 4. The Idyll (The Pastoral Figure)
+An Idyll focuses on <b><b>idealized figures</b></b>, often shepherds or rural folk, living in a simplified, peaceful world. When used narratively, it often depicts a &ldquo;golden age&rdquo; or a legendary past.
+</p>
+</div>
+</div>
+<div id="outline-container-orgea64452" class="outline-4">
+<h4 id="orgea64452"><span class="section-number-4">1.2.9.</span> Key Characteristics: Focus on &ldquo;natural&rdquo; nobility and the relationship between the figure and their environment.</h4>
+</div>
+<div id="outline-container-org5f6595f" class="outline-4">
+<h4 id="org5f6595f"><span class="section-number-4">1.2.10.</span> Example: Tennyson’s <b>Idylls of the King</b>, which reimagines the knights of the Round Table through a lens of chivalric ideals.</h4>
+<div class="outline-text-4" id="text-1-2-10">
+<p>
+&#x2014;
+</p>
+
+<p>
+### Comparison of Figure Archetypes
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Style</td>
+<td class="org-left">Central Figure Type</td>
+<td class="org-left">Primary Goal</td>
+</tr>
+
+<tr>
+<td class="org-left">:---</td>
+<td class="org-left">:---</td>
+<td class="org-left">:---</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Epic</b></b></td>
+<td class="org-left">National Hero / Demigod</td>
+<td class="org-left">To preserve culture or history.</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Mock-Epic</b></b></td>
+<td class="org-left">Vain Socialite / Petty Rival</td>
+<td class="org-left">To satirize social follies.</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Ballad</b></b></td>
+<td class="org-left">The Commoner / The Outlaw</td>
+<td class="org-left">To tell a tragic or haunting tale.</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Idyll</b></b></td>
+<td class="org-left">The Noble Shepherd / Knight</td>
+<td class="org-left">To depict an idealized moral world.</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Which of these styles feels most aligned with the story of Silas the Clock-keeper—does he feel more like a quiet ballad figure or a hidden epic hero?
+</p>
+</div>
+</div>
+<div id="outline-container-org83f4402" class="outline-4">
+<h4 id="org83f4402"><span class="section-number-4">1.2.11.</span> Three Visions of the Keeper of Time</h4>
+<div class="outline-text-4" id="text-1-2-11">
+<p>
+### I. The Epic: Silas, Ward of the Chronos
+</p>
+
+<p>
+<b>(A fragment from &ldquo;The Chronomachia,&rdquo; Book III)</b>
+</p>
+
+<p>
+Sing, Muse, of the mountain of gears, the silent, brass throne,
+Where Silas the Ward, ancient of days, ruled the moments alone.
+Not with sword, but with key, he held the cosmos at bay,
+And guarded the bubble where mortal men slept and they lay.
+Till the shadow-fracture struck! The great axle groaned and did bend,
+And time, in mid-motion, shattered. The bubble met its end!
+A thousand screams of silence rang as the people were froze,
+But Silas the Ward uprose! Majestic, his stature now grows.
+He wrestled the celestial engine, the gears locked in might,
+And hammered a path through the chronal fracture, restoring the light.
+</p>
+
+<p>
+<b>*</b>
+</p>
+
+<p>
+### II. The Ballad: The Weaver and the Wire
+</p>
+
+<p>
+<b>(Based on a traditional broadside folk tune)</b>
+</p>
+
+<p>
+Come all ye, and listen, and I will tell thee,
+Of Silas, a weaver, a plain sight to see.
+He lived in a tower, with shadows for friends,
+And tended the moments that gravity spends.
+</p>
+
+<p>
+<b>(REFRAIN: Sing silence, sing time, sing the thread that did mend.)</b>
+</p>
+
+<p>
+The baker, he paused, on his way to the shop,
+And the world, in a breath, came to a sudden full stop.
+The loom, it fell silent, the shuttle, it flew,
+For the great mainspring broken, the moments grew few.
+</p>
+
+<p>
+Silas, he took up a single bright wire,
+And a single small spark, from a single small fire.
+He threaded the fracture, so quiet and keen,
+Till the heart of the tower beat steady and clean.
+</p>
+
+<p>
+<b>(REFRAIN: Sing silence, sing time, sing the thread that did mend.)</b>
+</p>
+
+<p>
+<b>*</b>
+</p>
+
+<p>
+### III. Silas in the Idyll: The Golden Respiration
+</p>
+
+<p>
+<b>(A pastoral reverie)</b>
+</p>
+
+<p>
+Soft through the sun-dappled arch, where the ancient stonework sighs,
+Old Silas, gentle shepherd, works, with peace inside his eyes.
+He trims the delicate wings of the great clock&rsquo;s escapement flight,
+Like guiding a butterfly on the currents of the light.
+The landscape outside stretches, a soft and emerald stream,
+Where children and their kites dance through a tranquil dream.
+A flock of woolly sheep grazes, a river soft and clear,
+All synchronized in a pastoral rhythm, held perfect by the year.
+For Silas knows the art, the slow and golden respiration,
+The gentle pulse that makes the moments of our small salvation.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org5c5c33d" class="outline-3">
+<h3 id="org5c5c33d"><span class="section-number-3">1.3.</span> Rubric</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>Creativity: Somewhat unoriginal.
+The characture style of a time keeper isn&rsquo;t new one but isn&rsquo;t often delved into very deeply, but it being the usual old man personafied does feel somewhat cliched.</li>
+<li>Coherence / Structure: 5
+Generally the narrative poem like structure is followed very closely, with it even having metadata like that of such a entry being form a book within an overall epic.</li>
+<li>Language / Style: 4
+Each narrative poem witin it&rsquo;s respective styles uses terms which match their given context, but generally the story remains in a similar order as the rest; this is to say that the characture archutecture of Silas is simliar within all three stories whilst in a different context by enviromental termage.</li>
+<li>Engagement: 5
+The respective styles have good use of imagery by the use of such descriptive wordage for the context it&rsquo;s used in.</li>
+<li>Error Rate: 5
+Competely error free.</li>
+<li>Human-like Quality: 4
+There is some repration within the use of ryhmic structure along with imargery via objects used within the story.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd334037" class="outline-3">
+<h3 id="orgd334037"><span class="section-number-3">1.4.</span> Reflection</h3>
+<div class="outline-text-3" id="text-1-4">
+<ol class="org-ol">
+<li>Changning the prompt so as to create a mass of different narritive poems based off the orignal story did greatly effect the quality &amp; style of the story template. For example there is a great difference in the method of exchange of that of the Epic over that of the Balled, where the former uses a great deal of adjectives &amp; mass noun phrases in order to create a sense of magnitude within the story; whereas in the latter is more of action of a single person often from their or a second point of view.</li>
+<li>There wasn&rsquo;t much issue with limitation within the three different narritive poems, but there does seem to be some repetition between that of the Epic &amp; Ballad wherein the climax is the same; the pastoral could just be different due to the context which the narritive seeks to create.</li>
+<li>I&rsquo;d aruge that their isn&rsquo;t much of a hard limit for it&rsquo;s use for all the listed task within a office enviroment: though I do think it faulters on keeping track of error build up which can lead to a lack of futher exploration within a given problems scope (thinking of unknown-unknowns).</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Nate</p>
+<p class="date">Created: 2026-04-11 Sat 12:43</p>
+</div>
+</body>
+</html>

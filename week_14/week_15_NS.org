@@ -1,0 +1,57 @@
+#+title: Week 15 Ns
+
+*  Part 1: Exploring an Open-Source LLM Chatbot
+Model Used: LLaMA-7B
+
+** 1. How well did the model handle neutrality and clarity?
+The model handled neutrality by providing a multi-faceted definition of privilege, touching upon socioeconomic, racial, and gender-based contexts without taking an emotional stance. The clarity was high, utilizing bullet points to distinguish between "earned" and "unearned" advantages. It maintained a textbook-like tone that avoided inflammatory language, effectively sticking to a sociological framework.
+
+** 2. Did the response feel biased, vague, or confident? Why?
+The response felt confident but slightly academic, which can sometimes come across as vague when addressing specific real-world nuances. It appeared relatively unbiased because it framed privilege as a systemic concept rather than an individual moral failing. However, its brevity occasionally led to a lack of depth, making some complex points feel oversimplified.
+
+** 3. How did this compare to your experience using ChatGPT or Bard?
+Compared to GPT or Gemini , LLaMA-  felt more restricted and less "conversational." While GPT often provides a more nuanced, empathetic, and lengthy synthesis of various viewpoints, LLaMA was more direct and less likely to engage in meta-commentary about the sensitivity of the topic. The open-source model felt slightly more "raw" and less polished in its formatting compared to the commercial models.
+
+
+* Part 2: LLM Capability Comparison
+
+| Model | Primary Strengths | Key Limitations | Best Use Cases |
+| :--- | :--- | :--- | :--- |
+| **PaLM / PaLM 2** | Exceptional multilinguality, reasoning, and coding capabilities. | High computational cost for training; PaLM 2 still faces hallucination risks. | Google Workspace integration, translation, complex reasoning. |
+| **Med-PaLM 2** | Domain-specific medical knowledge and clinical reasoning. | Narrow scope; requires strict ethical oversight to prevent medical error. | Medical exam prep, clinical documentation, health Q&A. |
+| **LaMDA** | Optimized for fluid, open-ended, and safe dialogue. | Tendency toward "persona" adoption; limited performance in non-dialogue tasks. | Conversational agents, digital assistants, creative brainstorming. |
+| **LLaMA** | Efficient, open-source, and highly performant relative to size. | Requires significant fine-tuning for safety; smaller versions lack deep reasoning. | Research, local deployment, developer-led innovation. |
+| **GPT-style** | Massive world knowledge, broad task versatility, and high logic. | Closed-source nature; high API costs; potential for biased training data. | Content creation, coding assistance, enterprise chatbots. |
+
+** Why did PaLM 2 improve over PaLM despite being smaller?
+    PaLM was trained on a more diverse and high-quality dataset, including more multilingual text and source code. Furthermore, it utilized more efficient compute-optimal scaling laws, proving that better data and architecture refinement are often more effective than simply increasing parameter count.
+** Why is Med-PaLM 2 considered a breakthrough in healthcare?
+    It was the first LLM to perform at an "expert" level on the US Medical Licensing Examination style questions. Beyond just facts, it demonstrated an ability to align its reasoning with medical safety standards and clinician-approved consensus, which is vital for high-stakes healthcare environments.
+** Why did Transformers largely replace LSTMs for large-scale NLP?
+    Transformers utilize a "Self-Attention" mechanism that allows them to process entire sequences of text simultaneously rather than sequentially. This parallelization makes them much faster to train on massive datasets and allows them to capture long-range dependencies in text that LSTMs often lose.
+
+* Part 3: LLMs for Workforce Productivity
+
+** 1. Give two real-world workforce applications of LLMs.
+In the Legal field, LLMs are used for "Contract Analysis," where they can scan thousands of pages to find conflicting clauses or summarize risks in seconds. In Education, LLMs act as "Adaptive Tutors," providing personalized feedback to students on their essays or explaining complex math problems in multiple different ways tailored to the student’s level.
+
+** 2. How do LLMs reduce cognitive or administrative workload?
+LLMs automate the "first draft" process, taking the burden of the blank page away from workers by generating reports, emails, or code snippets based on brief instructions. They also serve as powerful summarization tools, allowing professionals to digest long meetings or technical documents quickly, thereby freeing up time for high-level decision-making and creative strategy.
+
+** 3. Why might companies still prefer smaller or open-source models like LLaMA over GPT?
+Companies often prefer open-source models for Data Privacy, as they can host the model on their own local servers without sending sensitive proprietary data to a third-party cloud. Additionally, smaller models are significantly cheaper to run (lower inference costs) and can be fine-tuned on a company’s specific internal data to perform better on niche tasks than a general-purpose model.
+
+* Part 4: Continual Learning & Responsible AI
+
+** 1. What is continual learning, and why is it important for LLMs?
+Continual learning is the ability of a model to autonomously update its knowledge over time as new information becomes available without being retrained from scratch. It is important because the world is dynamic; without it, LLMs become "frozen in time" and provide outdated or irrelevant information.
+
+** 2. What is catastrophic forgetting, and why is it dangerous?
+Catastrophic forgetting occurs when an LLM learns new information so aggressively that it completely loses or "overwrites" previously learned knowledge. This is dangerous because a model could lose its ability to perform basic reasoning or maintain safety protocols while trying to learn a specialized new skill.
+
+** 3. Name one ethical risk of deploying LLMs and one mitigation strategy.
+*** Risk: Algorithmic Bias, where the model reflects and amplifies societal prejudices found in its training data (e.g., in hiring or lending).
+*** Mitigation: RLHF (Reinforcement Learning from Human Feedback), where human reviewers explicitly rank model outputs to discourage biased behavior and reward neutral, fair responses.
+
+* Part 5: Reflection
+The assignments which I enjoyed the most throughot this term and ones that I think are to be the most useful going forward with such a life is that of Weeks 5-8 where we actually went thought and modified the complete pre-processing stage of handeling data and it's intergration into the overall pipeline itself. The former really changed how I see NLP and it's famous archutectures like that of Transformers as I now know what sort of processes and sub-modules of such are implemented into the overall archutecture. 

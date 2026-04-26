@@ -1,0 +1,164 @@
+#+title: Week 1
+** Assignment Notes  
+*** I'm going to be using Gemini instead of ChatGPT's line of models.
+On a use basis, I see only a small amount of differences between the two; Gemini is a little too hand-holdy and ChatGPT wants to do everything. I'm really only picking it because I find I like it's more teacher-like embedded prompt sentiment along when I'm learning stuff or do very boilarplate code. Another reason for picking it is due to it's use of a Sparesely-gated MoE layer within it's models; such an arcutechual design choice is a feed-forward network outputting to a gating network within a cell existing overall within a recurrent network. Futher information about such implemenation within a LMM can be found in the open paper OUTRAGEOUSLY LARGE NEURAL NETWORKS: THE SPARSELY-GATED MIXTURE-OF-EXPERTS LAYER
+*** Poem Creation with Gem.
+
+**** The Definition of a Narrative Poem
+
+In literature, a **poem-styled story** is formally known as a **narrative poem**. Unlike lyric poetry, which focuses on personal emotions or fleeting moments, narrative poetry prioritizes **plot, character development, and setting**. It utilizes poetic devices—such as rhythm, rhyme, and imagery—to propel a sequence of events. Think of it as a bridge between the precision of a sonnet and the structural journey of a short story.
+
+---
+
+## The Keeper of the Clock
+
+The gears were teeth that chewed the years,
+Inside a tower made of stone.
+Old Silas lived among the spheres,
+A king upon a brassy throne.
+He oiled the joints of Father Time,
+With heavy hands and silver hair,
+And listened to the hourly chime,
+That shuddered through the stagnant air.
+
+One Tuesday noon, the rhythm broke,
+A spring had snapped—a jagged sound.
+The village froze beneath the smoke,
+And silence settled on the ground.
+The baker’s breath was trapped in frost,
+The falling rain hung like a bead.
+The world was still, its pulse was lost,
+A heartbeat stopped in mid-stride greed.
+
+With steady fingers, Silas drew,
+A golden wire from his vest.
+He threaded history anew,
+And put the friction to the test.
+A single spark, a heavy *thrum*,
+The pendulum began its sway.
+The frozen birds began to hum,
+As Silas gave them back their day.
+
+He watched the crowds begin to move,
+Unaware of the pause they’d known.
+He settled back into the groove,
+Once more a king, once more alone.
+
+**** Within the literary canon, narrative poems are often categorized by their **scope**, the **stature of their characters**, and the **stylistic treatment of their figures**. 
+
+While all narrative poems tell a story, the "figures" (characters) and how they are presented define the specific sub-genre. Here are the primary styles:
+
+---
+
+## 1. The Epic (The Heroic Figure)
+The Epic is the "heavyweight" of narrative poetry. It focuses on a **larger-than-life hero** whose actions determine the fate of a nation, race, or the entire human universe. These figures are often semi-divine or possess extraordinary strength and moral complexity.
+
+**** Key Characteristics: Vast settings, supernatural intervention, and "In Medias Res" (starting in the middle of the action).
+**** Examples: Achilles in *The Iliad*, Beowulf in *Beowulf*, or Odysseus in *The Odyssey*.
+
+## 2. The Mock-Epic (The Trivial Figure)
+This style uses the lofty, formal language of an Epic to describe a **minor or trivial figure** involved in a petty situation. It creates humor by applying "heroic" importance to something insignificant.
+
+**** Key Characteristics: High-flown language used for low-stakes drama; satirical tone.
+**** Example: Alexander Pope’s *The Rape of the Lock*, which treats the theft of a lock of hair like a grand battle between gods.
+
+## 3. The Literary Ballad (The Tragic/Folk Figure)
+The ballad often centers on **ordinary or legendary figures** caught in moments of intense drama, romance, or tragedy. Unlike the Epic, the focus is narrow, usually revolving around a single event or a moral lesson.
+
+**** Key Characteristics: Quatrains (four-line stanzas), repetition (refrains), and a rhythmic, musical quality.
+**** Example: The wedding guest and the sailor in Coleridge’s *The Rime of the Ancient Mariner*.
+
+## 4. The Idyll (The Pastoral Figure)
+An Idyll focuses on **idealized figures**, often shepherds or rural folk, living in a simplified, peaceful world. When used narratively, it often depicts a "golden age" or a legendary past.
+
+**** Key Characteristics: Focus on "natural" nobility and the relationship between the figure and their environment.
+**** Example: Tennyson’s *Idylls of the King*, which reimagines the knights of the Round Table through a lens of chivalric ideals.
+
+---
+
+### Comparison of Figure Archetypes
+
+| Style | Central Figure Type | Primary Goal |
+| :--- | :--- | :--- |
+| **Epic** | National Hero / Demigod | To preserve culture or history. |
+| **Mock-Epic** | Vain Socialite / Petty Rival | To satirize social follies. |
+| **Ballad** | The Commoner / The Outlaw | To tell a tragic or haunting tale. |
+| **Idyll** | The Noble Shepherd / Knight | To depict an idealized moral world. |
+
+Which of these styles feels most aligned with the story of Silas the Clock-keeper—does he feel more like a quiet ballad figure or a hidden epic hero?
+**** Three Visions of the Keeper of Time
+
+### I. The Epic: Silas, Ward of the Chronos
+
+*(A fragment from "The Chronomachia," Book III)*
+
+Sing, Muse, of the mountain of gears, the silent, brass throne,
+Where Silas the Ward, ancient of days, ruled the moments alone.
+Not with sword, but with key, he held the cosmos at bay,
+And guarded the bubble where mortal men slept and they lay.
+Till the shadow-fracture struck! The great axle groaned and did bend,
+And time, in mid-motion, shattered. The bubble met its end!
+A thousand screams of silence rang as the people were froze,
+But Silas the Ward uprose! Majestic, his stature now grows.
+He wrestled the celestial engine, the gears locked in might,
+And hammered a path through the chronal fracture, restoring the light.
+
+***
+
+### II. The Ballad: The Weaver and the Wire
+
+*(Based on a traditional broadside folk tune)*
+
+Come all ye, and listen, and I will tell thee,
+Of Silas, a weaver, a plain sight to see.
+He lived in a tower, with shadows for friends,
+And tended the moments that gravity spends.
+
+*(REFRAIN: Sing silence, sing time, sing the thread that did mend.)*
+
+The baker, he paused, on his way to the shop,
+And the world, in a breath, came to a sudden full stop.
+The loom, it fell silent, the shuttle, it flew,
+For the great mainspring broken, the moments grew few.
+
+Silas, he took up a single bright wire,
+And a single small spark, from a single small fire.
+He threaded the fracture, so quiet and keen,
+Till the heart of the tower beat steady and clean.
+
+*(REFRAIN: Sing silence, sing time, sing the thread that did mend.)*
+
+***
+
+### III. Silas in the Idyll: The Golden Respiration
+
+*(A pastoral reverie)*
+
+Soft through the sun-dappled arch, where the ancient stonework sighs,
+Old Silas, gentle shepherd, works, with peace inside his eyes.
+He trims the delicate wings of the great clock's escapement flight,
+Like guiding a butterfly on the currents of the light.
+The landscape outside stretches, a soft and emerald stream,
+Where children and their kites dance through a tranquil dream.
+A flock of woolly sheep grazes, a river soft and clear,
+All synchronized in a pastoral rhythm, held perfect by the year.
+For Silas knows the art, the slow and golden respiration,
+The gentle pulse that makes the moments of our small salvation.
+*** Rubric
+- Creativity: Somewhat unoriginal.
+  The characture style of a time keeper isn't new one but isn't often delved into very deeply, but it being the usual old man personafied does feel somewhat cliched. 
+- Coherence / Structure: 5
+  Generally the narrative poem like structure is followed very closely, with it even having metadata like that of such a entry being form a book within an overall epic.  
+- Language / Style: 4
+  Each narrative poem witin it's respective styles uses terms which match their given context, but generally the story remains in a similar order as the rest; this is to say that the characture archutecture of Silas is simliar within all three stories whilst in a different context by enviromental termage.   
+- Engagement: 5
+  The respective styles have good use of imagery by the use of such descriptive wordage for the context it's used in.  
+- Error Rate: 5
+  Competely error free.
+- Human-like Quality: 4
+  There is some repration within the use of ryhmic structure along with imargery via objects used within the story.
+*** Reflection
+1. Changning the prompt so as to create a mass of different narritive poems based off the orignal story did greatly effect the quality & style of the story template. For example there is a great difference in the method of exchange of that of the Epic over that of the Balled, where the former uses a great deal of adjectives & mass noun phrases in order to create a sense of magnitude within the story; whereas in the latter is more of action of a single person often from their or a second point of view.   
+2. There wasn't much issue with limitation within the three different narritive poems, but there does seem to be some repetition between that of the Epic & Ballad wherein the climax is the same; the pastoral could just be different due to the context which the narritive seeks to create. 
+3. I'd aruge that their isn't much of a hard limit for it's use for all the listed task within a office enviroment: though I do think it faulters on keeping track of error build up which can lead to a lack of futher exploration within a given problems scope (thinking of unknown-unknowns).
+ 
