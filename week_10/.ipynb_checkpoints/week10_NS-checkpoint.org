@@ -1,6 +1,0 @@
-#+title: Week10 Ns
-
-* Assignment Notes 
-1. I had put the st.write function mapping in the very beginning of the script to have it act like a title.    
-3. I had actually changed the max depth of the Random Forest model due to it's low accuracy; I had changed it to 4 from 2 and gotten a 15% raise in accuracy.  
-4. One error I had encountered was having to import above both the Decision Tree and Random Forest packages into the script; another was having to add both "trainData = fetch_20newsgroups(subset='train', shuffle=True)" and "test_set = fetch_20newsgroups(subset='test', shuffle=True)".  

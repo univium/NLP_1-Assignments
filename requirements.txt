@@ -1,0 +1,22 @@
+# Core NLP Libraries
+nltk
+spacy
+transformers
+gensim
+textblob
+
+# Data Science & Visualization
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+
+# Notebook & UI
+ipykernel
+notebook
+streamlit
+
+# Utils
+requests
+tqdm
